@@ -22,5 +22,15 @@ RSpec.describe "StringCalculator" do
     it "should throw invalid input if input ends with '\n'" do
       expect(add_to("1,\n")).to eq("invalid input")
     end
+
+    it "should return error when input contains negative number" do
+      expect(add_to("1;-2")).to eq("negative numbers not allowed: -2")
+    end
+
+    it "should return error with all negative numbers in error when input contains multiple negative numbers" do
+      expect(add_to("1,-2,-3")).to eq("negative numbers not allowed: -2, -3")
+    end
+    
+
   end
 end
