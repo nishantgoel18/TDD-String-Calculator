@@ -36,5 +36,9 @@ RSpec.describe "StringCalculator" do
       expect(add_to(numbers)).to eq(58)
     end
 
+    it "should add the numbers correctly when input contains custom delimiter" do
+      numbers = "//;\n1;4"
+      expect(add_to(numbers)).to eq(5)
+    end
   end
 end
