@@ -31,6 +31,10 @@ RSpec.describe "StringCalculator" do
       expect(add_to("1,-2,-3")).to eq("negative numbers not allowed: -2, -3")
     end
 
+    it "should add the numbers correctly when input contains '\n' & ',' as delimiter" do
+      numbers = "12,3\n43"
+      expect(add_to(numbers)).to eq(58)
+    end
 
   end
 end

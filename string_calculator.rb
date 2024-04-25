@@ -3,7 +3,7 @@ module StringCalculator
     return 0 if empty?
     return "invalid input" if index("\n") == length-1
     
-    if !numbers_to_add.select{|n| n.to_i < 0}.empty?
+    if !numbers_to_add.select{|n| n < 0}.empty?
       return "negative numbers not allowed: #{numbers_to_add.select{|n| n < 0}.join(', ')}"
     else
       numbers_to_add.sum
