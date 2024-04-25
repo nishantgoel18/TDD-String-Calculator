@@ -11,6 +11,6 @@ module StringCalculator
   end
 
   def numbers_to_add
-    split(',').map(&:to_i)
+    gsub("\n", ',').split(',').map(&:to_i)
   end
 end
