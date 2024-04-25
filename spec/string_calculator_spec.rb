@@ -5,12 +5,8 @@ def add_to(number_string)
   number_string.extend(StringCalculator).add
 end
 
-def add_to_error_message(number_string, expected_sum)
-
-end
-
 RSpec.describe "StringCalculator" do
-  context "sum method" do
+  context "add method" do
     it "should return 0 for empty string" do
       expect(add_to("")).to eq(0)
     end
@@ -23,5 +19,8 @@ RSpec.describe "StringCalculator" do
       expect(add_to("2,3,5")).to eq(10)
     end
 
+    it "should throw invalid input if input ends with '\n'" do
+      expect(add_to("1,\n")).to eq("invalid input")
+    end
   end
 end

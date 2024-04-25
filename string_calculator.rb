@@ -3,7 +3,10 @@ module StringCalculator
     return 0 if empty?
     
     if include?(',')
-      split(',').map(&:to_i).sum
+      numbers_to_added.sum
     end
   end
+
+  def numbers_to_added
+    split(',').map(&:to_i)
 end
