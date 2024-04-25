@@ -18,5 +18,10 @@ RSpec.describe "StringCalculator" do
     it "should add correctly if numbers in input are comma separated" do
       expect(add_to("2,3")).to eq(5)
     end
+
+    it "should add correctly if more than 2 numbers in input are comma separated" do
+      expect(add_to("2,3,5")).to eq(10)
+    end
+
   end
 end
