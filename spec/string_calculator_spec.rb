@@ -24,13 +24,13 @@ RSpec.describe "StringCalculator" do
     end
 
     it "should return error when input contains negative number" do
-      expect(add_to("1;-2")).to eq("negative numbers not allowed: -2")
+      expect(add_to("1,-2")).to eq("negative numbers not allowed: -2")
     end
 
     it "should return error with all negative numbers in error when input contains multiple negative numbers" do
       expect(add_to("1,-2,-3")).to eq("negative numbers not allowed: -2, -3")
     end
-    
+
 
   end
 end
